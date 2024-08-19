@@ -27,6 +27,7 @@ html {
 
 body {
   background: #333;
+  height: 3000px;
 }
 
 header {
@@ -41,6 +42,15 @@ header {
   transform: translateX(-50%);
   border-radius: 5rem;
   z-index: 1000;
+  padding: 0.5rem 1.5rem;
+  transition: 0.2s;
+}
+
+.header-active {
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 
 header .navbar ul {
@@ -55,7 +65,7 @@ header .navbar ul li {
 }
 
 header .navbar ul li a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--indigo);
   translate: 0.2s;
 }
@@ -66,12 +76,62 @@ header .navbar ul li a:hover {
 }
 
 header .logo {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--indigo);
   text-transform: uppercase;
 }
 
 header .logo i {
   padding: 0 0.2rem;
-  color: var(--Lilac);
+  color: var(--indigo);
+}
+
+header .fa-bars {
+  font-size: 2.5rem;
+  color: var(--indigo);
+  display: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header .fa-times {
+  transform: rotate(180deg);
+  color: var(--indigo);
+  transition: 0.2s;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  header .fa-bars {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    top: -100rem;
+    left: 0%;
+    width: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    opacity: 0;
+    translate: 0.2s;
+  }
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+  header .navbar ul li {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .navbar ul li a {
+    font-size: 2rem;
+    display: block;
+  }
+  header .nav-toggle {
+    top: 4rem;
+    opacity: 1;
+  }
 }
