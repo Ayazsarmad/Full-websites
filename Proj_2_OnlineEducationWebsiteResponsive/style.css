@@ -134,6 +134,12 @@ header .fa-times {
     top: 4rem;
     opacity: 1;
   }
+  .home::before {
+    display: none;
+  }
+  .home .content p {
+    padding: 1.5rem 2rem !important;
+  }
 }
 
 .home {
@@ -158,7 +164,7 @@ header .fa-times {
   text-align: center;
 }
 .home .content h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #fff;
   padding: 0 1rem;
   text-shadow: 0 0.3rem 0.5rem rgba((0), 0, 0, 0.3);
@@ -168,7 +174,7 @@ header .fa-times {
 .home .content p {
   font-size: 2rem;
   color: #eee;
-  padding: 1rem 25rem;
+  padding: 1rem 10rem;
 }
 
 .home .content button {
@@ -203,4 +209,49 @@ header .fa-times {
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
   margin: 2rem;
   cursor: pointer;
+}
+
+.home .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: var(--Lilac);
+  font-size: 3rem;
+  margin: 2rem 0;
+  transition: 0.2s;
+}
+
+.home .box-container .box:hover i {
+  background: var(--indigo);
+}
+
+.home .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--Lilac);
+  transition: 0.2s;
+}
+
+.home .box-container .box:hover h3 {
+  color: var(--indigo);
+}
+
+.home .box-container .box p {
+  font-size: 1.3rem;
+  padding: 0.7rem 2rem;
+  color: #666;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  bottom: -25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 70vh solid #fff;
+  width: 120%;
+  border-radius: 50%;
+  z-index: -1;
 }
