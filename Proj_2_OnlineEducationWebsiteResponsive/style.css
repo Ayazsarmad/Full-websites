@@ -2,7 +2,7 @@
 
 :root {
   --indigo: #4b0082;
-  --Lilac: #c8a2c8;
+  --Lilac: #be38be;
 }
 
 * {
@@ -25,8 +25,26 @@ html {
   overflow-x: hidden;
 }
 
+.heading {
+  font-size: 4rem;
+  color: var(--indigo);
+  text-align: center;
+  padding: 0 1rem;
+  padding-top: 6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+
+.title {
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #aaaa;
+}
+
 body {
-  background: #333;
+  /* background: #333; */
   height: 3000px;
 }
 
@@ -98,48 +116,6 @@ header .fa-times {
   transform: rotate(180deg);
   color: var(--indigo);
   transition: 0.2s;
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 55%;
-  }
-  header .fa-bars {
-    display: block;
-  }
-  header .navbar {
-    position: fixed;
-    top: -100rem;
-    left: 0%;
-    width: 100%;
-    background: #fff;
-    border-radius: 1rem;
-    opacity: 0;
-    translate: 0.2s;
-  }
-  header .navbar ul {
-    flex-flow: column;
-    padding: 2rem 0;
-  }
-  header .navbar ul li {
-    margin: 1rem 0;
-    width: 100%;
-    text-align: center;
-  }
-  header .navbar ul li a {
-    font-size: 2rem;
-    display: block;
-  }
-  header .nav-toggle {
-    top: 4rem;
-    opacity: 1;
-  }
-  .home::before {
-    display: none;
-  }
-  .home .content p {
-    padding: 1.5rem 2rem !important;
-  }
 }
 
 .home {
@@ -254,4 +230,110 @@ header .fa-times {
   width: 120%;
   border-radius: 50%;
   z-index: -1;
+}
+
+.about .row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.about .content {
+  padding-left: 5rem;
+  margin-top: 08%;
+}
+
+.about .content h3 {
+  font-size: 3rem;
+  color: var(--indigo);
+  padding-top: 5%;
+}
+.about .content p {
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1.5rem 0;
+}
+
+.about .row .content button {
+  height: 3.5rem;
+  width: 17rem;
+  background: var(--Lilac);
+  color: #fff;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 2rem;
+}
+
+.about .row .content button:hover {
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
+  background: var(--indigo);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  header .fa-bars {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    top: -100rem;
+    left: 0%;
+    width: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    opacity: 0;
+    translate: 0.2s;
+  }
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+  header .navbar ul li {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .navbar ul li a {
+    font-size: 2rem;
+    display: block;
+  }
+  header .nav-toggle {
+    top: 4rem;
+    opacity: 1;
+  }
+  .home::before {
+    display: none;
+  }
+  .home .content p {
+    padding: 1.5rem 2rem !important;
+  }
+  .about .row {
+    flex-flow: column-reverse;
+  }
+  .about .row .image {
+    width: 100vw;
+    height: auto;
+  }
+  .about .row .image img {
+    height: auto;
+    width: 50%;
+  }
+  .about .content {
+    padding-left: 0rem;
+    margin-top: 2rem;
+  }
+}
+.about .row .image {
+  width: 100%;
+  height: auto;
+}
+.about .row .image img {
+  height: auto;
+  width: 100%;
 }
