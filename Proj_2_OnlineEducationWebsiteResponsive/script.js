@@ -13,5 +13,20 @@ $(document).ready(function () {
     } else {
       $("header").removeClass("header-active");
     }
+
+    $("section").each(function () {
+      var top = $(window).scrollTop();
+      var id = $(this).attr("id");
+      var height = $(this).height();
+      var offset = $(this).offset().top - 200; // Corrected variable usage
+
+      if (top >= offset && top < offset + height) {
+        // Corrected condition
+        $(".navbar ul li a").removeClass("active");
+        $(".navbar")
+          .find('[href="#' + id + '"]')
+          .addClass("active"); // Added .addClass("active") to highlight the link
+      }
+    });
   });
 });
