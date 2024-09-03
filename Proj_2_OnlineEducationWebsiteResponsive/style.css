@@ -370,6 +370,55 @@ header .fa-times {
   padding: 1rem 0;
 }
 
+.review {
+  background: #f9f9f9;
+}
+
+.review .box-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 4rem;
+  gap: 1.5rem;
+}
+.review .box-container .box {
+  width: 28rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  background: #fff;
+  padding: 6rem 2rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.review .box-container .box img {
+  width: 8.5rem;
+  height: 8.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -4rem;
+  border: 0.6rem solid var(--Lilac);
+  border-left: 0.6rem solid var(--indigo);
+  border-bottom: 0.6rem solid var(--indigo);
+}
+.review .box-container .box h3 {
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: var(--Lilac);
+}
+
+.review .box-container .box p {
+  font-size: 1.4rem;
+  padding: 0 1.3rem;
+  color: #666;
+}
+
+.review .box-container .box i {
+  font-size: 1.6rem;
+  color: var(--indigo);
+}
+
 /* --------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   html {
