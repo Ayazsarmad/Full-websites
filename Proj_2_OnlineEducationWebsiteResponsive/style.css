@@ -120,7 +120,7 @@ header .fa-times {
 
 .home {
   min-height: 100vh;
-  background: linear-gradient(rgba(198, 59, 250, 0.7), rgba(198, 59, 250, 0.7)),
+  background: linear-gradient(rgba(226, 0, 188, 0.7), rgba(128, 120, 8, 0.7)),
     url(./images/accessories-composition.png) no-repeat;
   background-size: cover;
   background-position: center;
@@ -168,6 +168,7 @@ header .fa-times {
 
 .home .content button:hover {
   letter-spacing: 0.2rem;
+  background: var(--Lilac);
 }
 
 .home .box-container {
